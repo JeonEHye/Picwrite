@@ -22,7 +22,6 @@
                 android:id="@+id/text_calender"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="80dp"
                 android:text="8월"
                 android:textSize="30sp"
                 app:layout_constraintBottom_toTopOf="@+id/recyclerViewCalendar"
@@ -45,7 +44,7 @@
 
             </androidx.recyclerview.widget.RecyclerView>
 
-            <View
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/view_calendar_subbox"
                 android:layout_width="0dp"
                 android:layout_height="240dp"
@@ -53,17 +52,16 @@
                 android:background="@drawable/border"
                 app:layout_constraintEnd_toEndOf="@id/recyclerViewCalendar"
                 app:layout_constraintStart_toStartOf="@id/recyclerViewCalendar"
-                app:layout_constraintTop_toBottomOf="@+id/recyclerViewCalendar" />
+                app:layout_constraintTop_toBottomOf="@+id/recyclerViewCalendar" >
 
-            <View
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/view_calendar_subbox_underline"
                 android:layout_width="0dp"
                 android:layout_height="40dp"
-                android:layout_marginTop="32dp"
                 android:background="@drawable/border"
-                app:layout_constraintEnd_toEndOf="@id/recyclerViewCalendar"
-                app:layout_constraintStart_toStartOf="@id/recyclerViewCalendar"
-                app:layout_constraintTop_toBottomOf="@+id/recyclerViewCalendar" />
+                app:layout_constraintEnd_toEndOf="@id/view_calendar_subbox"
+                app:layout_constraintStart_toStartOf="@id/view_calendar_subbox"
+                app:layout_constraintTop_toTopOf="@id/view_calendar_subbox">
 
             <TextView
                 android:id="@+id/tv_calendar_diary_entry_date"
@@ -74,7 +72,7 @@
                 android:text="2024.08.17. |"
                 android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="@+id/view_calendar_subbox_underline"
-                app:layout_constraintTop_toTopOf="@id/view_calendar_subbox" />
+                app:layout_constraintTop_toTopOf="@id/view_calendar_subbox_underline" />
 
             <TextView
                 android:id="@+id/tv_calendar_diary_entry_title"
@@ -85,11 +83,13 @@
                 android:text="일기 제목 자리 입니다."
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="@id/view_calendar_subbox_underline"
-                app:layout_constraintTop_toTopOf="@id/view_calendar_subbox" />
+                app:layout_constraintTop_toTopOf="@id/view_calendar_subbox_underline" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <HorizontalScrollView
                 android:id="@+id/lo_h_sv"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="88dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
@@ -174,6 +174,8 @@
                 app:layout_constraintStart_toEndOf="@id/tv_calendar_diary_entry_sub_title2"
                 app:layout_constraintTop_toTopOf="@id/tv_calendar_diary_entry_sub_title2"
                 app:layout_constraintBottom_toBottomOf="@id/tv_calendar_diary_entry_sub_title2"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <View
                 android:layout_width="match_parent"
