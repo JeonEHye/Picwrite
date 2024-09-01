@@ -88,7 +88,7 @@
                 app:layout_constraintTop_toTopOf="@id/view_calendar_subbox" />
 
             <HorizontalScrollView
-                android:id="@+id/layout_horizontal_scrollview"
+                android:id="@+id/lo_h_sv"
                 android:layout_width="wrap_content"
                 android:layout_height="88dp"
                 android:layout_marginStart="16dp"
@@ -121,6 +121,23 @@
                         app:layout_constraintStart_toEndOf="@id/iv_diary_entry_main_pic1"
                         app:layout_constraintTop_toTopOf="@id/layout_constraint_horizontal_scrollview" />
 
+                    <ImageView
+                        android:id="@+id/iv_diary_entry_main_pic3"
+                        android:layout_width="88dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:background="@drawable/picwrite"
+                        app:layout_constraintStart_toEndOf="@id/iv_diary_entry_main_pic2"
+                        app:layout_constraintTop_toTopOf="@id/layout_constraint_horizontal_scrollview" />
+
+                    <ImageView
+                        android:id="@+id/iv_diary_entry_main_pic4"
+                        android:layout_width="88dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:background="@drawable/picwrite"
+                        app:layout_constraintStart_toEndOf="@id/iv_diary_entry_main_pic3"
+                        app:layout_constraintTop_toTopOf="@id/layout_constraint_horizontal_scrollview" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </HorizontalScrollView>
@@ -134,19 +151,29 @@
                 android:text="#태그1입니다."
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="@id/view_calendar_subbox"
-                app:layout_constraintTop_toBottomOf="@id/layout_horizontal_scrollview" />
+                app:layout_constraintTop_toBottomOf="@id/lo_h_sv" />
 
             <TextView
                 android:id="@+id/tv_calendar_diary_entry_sub_title2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
                 android:text="#태그2입니다."
                 android:textSize="16sp"
-                app:layout_constraintStart_toBottomOf="@id/tv_calendar_diary_entry_sub_title1"
-                app:layout_constraintStart_toEndOf="@+id/tv_calendar_diary_entry_sub_title1"
-                app:layout_constraintTop_toBottomOf="@id/layout_horizontal_scrollview" />
+                app:layout_constraintStart_toEndOf="@id/tv_calendar_diary_entry_sub_title1"
+                app:layout_constraintTop_toTopOf="@id/tv_calendar_diary_entry_sub_title1"
+                app:layout_constraintBottom_toBottomOf="@id/tv_calendar_diary_entry_sub_title1"/>
+
+            <TextView
+                android:id="@+id/tv_calendar_diary_entry_sub_title3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="#태그3입니다."
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@id/tv_calendar_diary_entry_sub_title2"
+                app:layout_constraintTop_toTopOf="@id/tv_calendar_diary_entry_sub_title2"
+                app:layout_constraintBottom_toBottomOf="@id/tv_calendar_diary_entry_sub_title2"/>
 
             <View
                 android:layout_width="match_parent"
