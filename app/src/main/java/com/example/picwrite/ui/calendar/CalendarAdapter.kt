@@ -7,7 +7,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.picwrite.R
 
-class CalendarAdapter(private val items: List<CalendarItem>) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class CalendarAdapter(private val items: List<CalendarItem>) :
+    RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     interface OnItemClickListener {
         fun onItemClick(item:CalendarItem)
