@@ -7,15 +7,15 @@
 
     <fragment
         android:id="@+id/navigation_calendar"
-        android:name="com.example.picwrite.ui.album.AlbumFragment"
+        android:name="com.example.picwrite.ui.calendar.CalendarFragment"
         android:label="@string/title_calendar"
-        tools:layout="@layout/fragment_album" />
+        tools:layout="@layout/fragment_calendar" />
 
     <fragment
         android:id="@+id/navigation_album"
-        android:name="com.example.picwrite.ui.calendar.CalendarFragment"
+        android:name="com.example.picwrite.ui.album.AlbumFragment"
         android:label="@string/title_album"
-        tools:layout="@layout/fragment_calendar" />
+        tools:layout="@layout/fragment_album" />
 
     <fragment
         android:id="@+id/navigation_settings"

@@ -9,6 +9,13 @@ import com.example.picwrite.R
 
 class CalendarAdapter(private val items: List<CalendarItem>) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
+    interface OnItemClickListener {
+        fun onItemClick(item:CalendarItem)
+    }
+
+    var itemClick : OnItemClickListener? = null
+
+
     companion object {
         private const val TYPE_HEADER = 0
         private const val TYPE_DAY = 1
@@ -37,6 +44,10 @@ class CalendarAdapter(private val items: List<CalendarItem>) : RecyclerView.Adap
         when (holder) {
             is HeaderViewHolder -> holder.bind(items[position] as CalendarItem.Header)
             is DayViewHolder -> holder.bind(items[position] as CalendarItem.Day)
+        }
+
+        holder.itemView.setOnClickListener{
+            itemClick?.onItemClick(items[position])
         }
     }
 

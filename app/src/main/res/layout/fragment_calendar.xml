@@ -10,7 +10,7 @@
         android:id="@+id/text_calender"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="80dp"
         android:text="8월"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/recyclerViewCalendar"
@@ -38,21 +38,85 @@
         android:layout_width="0dp"
         android:layout_height="240dp"
         android:layout_marginTop="32dp"
-        android:background="@color/white"
+        android:background="@drawable/border"
+        app:layout_constraintEnd_toEndOf="@id/recyclerViewCalendar"
+        app:layout_constraintStart_toStartOf="@id/recyclerViewCalendar"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerViewCalendar" />
+
+    <View
+        android:id="@+id/view_calendar_subbox_underline"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/border"
         app:layout_constraintEnd_toEndOf="@id/recyclerViewCalendar"
         app:layout_constraintStart_toStartOf="@id/recyclerViewCalendar"
         app:layout_constraintTop_toBottomOf="@+id/recyclerViewCalendar" />
 
     <TextView
-        android:id="@+id/tv_calendar_diaryentrydate"
+        android:id="@+id/tv_calendar_diary_entry_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:text="2024.08.17."
+        android:text="2024.08.17. |"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/view_calendar_subbox_underline"
+        app:layout_constraintTop_toTopOf="@id/view_calendar_subbox" />
+
+    <TextView
+        android:id="@+id/tv_calendar_diary_entry_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="8dp"
+        android:text="일기 제목 자리 입니다."
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/view_calendar_subbox_underline"
+        app:layout_constraintTop_toTopOf="@id/view_calendar_subbox" />
+
+    <HorizontalScrollView
+        android:id="@+id/sv_subbox"
+        android:layout_width="112dp"
+        android:layout_height="88dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="@+id/view_calendar_subbox"
+        app:layout_constraintTop_toBottomOf="@+id/view_calendar_subbox_underline">
+
+        <!--수평 콘텐츠-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_diary_entry_main_pic1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/picwrite" />
+
+            <ImageView
+                android:id="@+id/iv_diary_entry_main_pic2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/picwrite"/>
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+
+    <TextView
+        android:id="@+id/tv_calendar_diary_entry_sub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="8dp"
+        android:text="#태그입니다."
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@id/view_calendar_subbox"
-        app:layout_constraintTop_toTopOf="@id/view_calendar_subbox" />
+        app:layout_constraintTop_toBottomOf="@id/sv_subbox" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
