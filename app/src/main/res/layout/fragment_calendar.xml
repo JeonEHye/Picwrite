@@ -45,6 +45,7 @@
             </androidx.recyclerview.widget.RecyclerView>
 
             <TextView
+                android:id="@+id/tv_calendar_diary_entry_top_sub_title1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="14sp"
@@ -53,6 +54,7 @@
                 android:paddingStart="8dp"
                 android:paddingEnd="8dp"
                 android:paddingBottom="4dp"
+                android:layout_marginTop="16dp"
                 android:background="@drawable/radius_50dp_border"
                 app:layout_constraintTop_toBottomOf="@id/recyclerViewCalendar"
                 app:layout_constraintStart_toStartOf="@id/recyclerViewCalendar"/>
@@ -61,11 +63,11 @@
                 android:id="@+id/view_calendar_subbox"
                 android:layout_width="0dp"
                 android:layout_height="240dp"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="16dp"
                 android:background="@drawable/border"
                 app:layout_constraintEnd_toEndOf="@id/recyclerViewCalendar"
                 app:layout_constraintStart_toStartOf="@id/recyclerViewCalendar"
-                app:layout_constraintTop_toBottomOf="@+id/recyclerViewCalendar" >
+                app:layout_constraintTop_toBottomOf="@+id/tv_calendar_diary_entry_top_sub_title1" >
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/view_calendar_subbox_underline"
