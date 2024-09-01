@@ -59,6 +59,40 @@
                 app:layout_constraintTop_toBottomOf="@id/recyclerViewCalendar"
                 app:layout_constraintStart_toStartOf="@id/recyclerViewCalendar"/>
 
+            <TextView
+                android:id="@+id/tv_calendar_diary_entry_top_sub_title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text="# 행복한 날"
+                android:paddingTop="4dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="4dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/radius_50dp_border"
+                app:layout_constraintTop_toBottomOf="@id/recyclerViewCalendar"
+                app:layout_constraintStart_toEndOf="@id/tv_calendar_diary_entry_top_sub_title1"/>
+
+            <TextView
+                android:id="@+id/tv_calendar_diary_entry_top_sub_title3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text="# 행복한 날"
+                android:paddingTop="4dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="4dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/radius_50dp_border"
+                app:layout_constraintTop_toBottomOf="@id/recyclerViewCalendar"
+                app:layout_constraintStart_toEndOf="@id/tv_calendar_diary_entry_top_sub_title2"/>
+
+
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/view_calendar_subbox"
                 android:layout_width="0dp"
