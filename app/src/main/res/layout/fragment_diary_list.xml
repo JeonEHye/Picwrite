@@ -5,10 +5,14 @@
     android:layout_height="match_parent"
     tools:context=".ui.diarylist.DiaryListFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewCalendar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:clipToPadding="true"
+        android:padding="8dp" />
+        <!--속성은 특히 스크롤 가능한 뷰(ScrollView, RecyclerView 등)에서 유용하게 사용됨.
+        패딩 영역을 포함하여 콘텐츠가 더 넓은 범위를 커버하도록 하고 싶을 때 clipToPadding을 false로 설정하면 좋음-->
+
 
 </FrameLayout>
