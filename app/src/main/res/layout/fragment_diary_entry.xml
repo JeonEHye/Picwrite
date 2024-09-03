@@ -98,11 +98,11 @@
                     <!--일기 메인 등록 버튼-->
                     <ImageView
                         android:id="@+id/btn_diary_entry_main_add"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
                         android:layout_marginStart="8dp"
                         android:layout_marginEnd="8dp"
-                        android:background="@drawable/ic_add_5f6368_24dp"
+                        android:background="@drawable/ic_star_24dp"
                         app:layout_constraintStart_toStartOf="@id/view_calendar_subbox_underline"
                         app:layout_constraintTop_toTopOf="@id/tv_calendar_diary_entry_title"
                         app:layout_constraintBottom_toBottomOf="@id/tv_calendar_diary_entry_title"/>
