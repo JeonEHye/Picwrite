@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Picwrite</string>
-    <string name="title_calendar">Home</string>
-    <string name="title_album">Dashboard</string>
-    <string name="title_settings">Notifications</string>
+    <string name="title_calendar">Calendar</string>
+    <string name="title_album">Album</string>
+    <string name="title_settings">Settings</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

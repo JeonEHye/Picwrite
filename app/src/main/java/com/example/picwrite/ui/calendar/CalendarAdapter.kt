@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.picwrite.R
+import com.example.picwrite.ui.album.AlbumItem
 
 class CalendarAdapter(private val items: List<CalendarItem>) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
@@ -15,7 +16,6 @@ class CalendarAdapter(private val items: List<CalendarItem>) :
     }
 
     var itemClick : OnItemClickListener? = null
-
 
     companion object {
         private const val TYPE_HEADER = 0
