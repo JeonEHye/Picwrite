@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.picwrite.R
 import com.example.picwrite.ui.album.AlbumItem
 
-class CalendarAdapter(private val items: List<AlbumItem>) :
+class CalendarAdapter(private val items: List<CalendarItem>) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     interface OnItemClickListener {

@@ -1,5 +1,6 @@
 package com.example.picwrite.ui.album
 
+import AlbumAdapter
 import AlbumViewModel
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -39,7 +40,7 @@ class AlbumFragment : Fragment() {
 
         // ViewModel의 데이터를 관찰하여 RecyclerView에 연결
         viewModel.items.observe(viewLifecycleOwner, Observer { items ->
-            binding.albumRecyclerView.adapter = CalendarAdapter(items)
+            binding.albumRecyclerView.adapter = AlbumAdapter(items)
         })
         return root
     }
