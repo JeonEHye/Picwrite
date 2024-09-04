@@ -11,18 +11,18 @@ class AlbumViewModel : ViewModel() {
 
     init {
         val itemList = mutableListOf<AlbumItem>()
-        itemList.add(AlbumItem(R.drawable.picwrite, "Text 1"))
-        itemList.add(AlbumItem(R.drawable.picwrite, "Text 2"))
-        itemList.add(AlbumItem(R.drawable.picwrite, "Text 3"))
-        itemList.add(AlbumItem(R.drawable.picwrite, "Text 4"))
-        itemList.add(AlbumItem(R.drawable.picwrite, "Text 5"))
-        itemList.add(AlbumItem(R.drawable.picwrite, "Text 6"))
-        itemList.add(AlbumItem(R.drawable.picwrite, "Text 7"))
-        itemList.add(AlbumItem(R.drawable.picwrite, "Text 8"))
-        itemList.add(AlbumItem(R.drawable.picwrite, "Text 9"))
-        itemList.add(AlbumItem(R.drawable.picwrite, "Text 10"))
-        itemList.add(AlbumItem(R.drawable.picwrite, "Text 11"))
-        itemList.add(AlbumItem(R.drawable.picwrite, "Text 12"))
+        itemList.add(AlbumItem(R.drawable.picwrite, "1월"))
+        itemList.add(AlbumItem(R.drawable.picwrite, "2월"))
+        itemList.add(AlbumItem(R.drawable.picwrite, "3월"))
+        itemList.add(AlbumItem(R.drawable.picwrite, "4월"))
+        itemList.add(AlbumItem(R.drawable.picwrite, "5월"))
+        itemList.add(AlbumItem(R.drawable.picwrite, "6월"))
+        itemList.add(AlbumItem(R.drawable.picwrite, "7월"))
+        itemList.add(AlbumItem(R.drawable.picwrite, "8월"))
+        itemList.add(AlbumItem(R.drawable.picwrite, "9월"))
+        itemList.add(AlbumItem(R.drawable.picwrite, "10월"))
+        itemList.add(AlbumItem(R.drawable.picwrite, "11월"))
+        itemList.add(AlbumItem(R.drawable.picwrite, "12월"))
 
         _items.value = itemList
     }

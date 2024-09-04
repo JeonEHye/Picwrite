@@ -22,7 +22,7 @@ class CalendarViewModel : ViewModel() {
         val items = mutableListOf<CalendarItem>()
 
         // 요일 헤더 추가
-        val daysOfWeek = listOf("Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat")
+        val daysOfWeek = listOf("일", "월", "화", "수", "목", "금", "토")
         daysOfWeek.forEach { dayOfWeek ->
             items.add(CalendarItem.Header(dayOfWeek))
         }
