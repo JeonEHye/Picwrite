@@ -7,13 +7,16 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
+import com.example.picwrite.R
 import com.example.picwrite.databinding.FragmentCalendarBinding
+
+
 
 class CalendarFragment : Fragment() {
 
     private var _binding: FragmentCalendarBinding? = null
-
     private val binding get() = _binding!!
     private val viewModel: CalendarViewModel by viewModels()
 
@@ -28,14 +31,10 @@ class CalendarFragment : Fragment() {
 
         // GridLayoutManager 설정
         val layoutManager =
-            GridLayoutManager(requireContext(), 7)  // 7 columns for the days of the week
+            GridLayoutManager(requireContext(), 7)
         layoutManager.spanSizeLookup = object : GridLayoutManager.SpanSizeLookup() {
             override fun getSpanSize(position: Int): Int {
                 return 1
-                /*return when (items[position]) {
-                    is CalendarItem.Header -> 1  // 1 column for header
-                    is CalendarItem.Day -> 1     // 1 column for each day
-                }*/
             }
         }
 
@@ -46,14 +45,11 @@ class CalendarFragment : Fragment() {
             val adapter = CalendarAdapter(items)
             binding.recyclerViewCalendar.adapter = adapter
 
-
             // 캘린더의 날짜 아이템 클릭 시, subbox 내용이 바뀌도록 연결
-
             adapter.itemClick = object : CalendarAdapter.OnItemClickListener {
                 override fun onItemClick(item: CalendarItem) {
                     binding.tvCalendarDiaryEntryDate.text = "테스트 날짜"
                     binding.tvCalendarDiaryEntryTitle.text = "테스트 제목"
-//                    binding.ivDiaryEntryMainPic1.drawable = ""
                     binding.tvCalendarDiaryEntrySubTitle1.text = "테스트 태그1"
                     binding.tvCalendarDiaryEntrySubTitle2.text = "테스트 태그2"
                     binding.tvCalendarDiaryEntrySubTitle3.text = "테스트 태그3"
@@ -69,6 +65,30 @@ class CalendarFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        // ImageView 클릭 이벤트 설정
+        binding.btnDiaryEntryAdd.setOnClickListener {
+            findNavController().navigate(R.id.action_calendarFragment_to_diaryEntryFragment)
+        }
+
+        //1차 시도
+//
+//            // 이동하려는 프래그먼트를 인스턴스화
+//            val diaryEntryFragment = DiaryEntryFragment()
+//
+//            // 프래그먼트 매니저를 통해 트랜잭션 시작
+//            val transaction = requireActivity().supportFragmentManager.beginTransaction()
+//
+//            // 현재 프래그먼트를 새로운 프래그먼트로 교체
+//            transaction.replace(R.id.fragment_diary_entry_xml, diaryEntryFragment)
+//
+//            // 뒤로 가기 버튼을 눌렀을 때 이전 프래그먼트로 돌아오게 하기 위해 백스택에 추가
+//            transaction.addToBackStack(null)
+//
+//            // 트랜잭션 완료
+//            transaction.commit()
+//        }
+
     }
 
     override fun onDestroyView() {
