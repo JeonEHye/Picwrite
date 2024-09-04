@@ -86,7 +86,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/constraintlayout_album_sub_box1" />
 
                 <HorizontalScrollView
-                    android:id="@+id/lo_h_sv"
+                    android:id="@+id/sv_horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginStart="32dp"
@@ -196,6 +196,7 @@
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
+
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/album_recyclerView2"
