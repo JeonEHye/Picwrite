@@ -50,7 +50,6 @@ class CalendarFragment : Fragment() {
                 override fun onItemClick(item: CalendarItem) {
                     binding.tvCalendarDiaryEntryDate.text = "테스트 날짜"
                     binding.tvCalendarDiaryEntryTitle.text = "테스트 제목"
-//                    binding.ivDiaryEntryMainPic1.drawable = ""
                     binding.tvCalendarDiaryEntrySubTitle1.text = "테스트 태그1"
                     binding.tvCalendarDiaryEntrySubTitle2.text = "테스트 태그2"
                     binding.tvCalendarDiaryEntrySubTitle3.text = "테스트 태그3"

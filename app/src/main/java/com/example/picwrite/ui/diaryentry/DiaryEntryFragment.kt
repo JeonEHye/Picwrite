@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.picwrite.databinding.FragmentDiaryEntryBinding
 
-class DiaryFragment : Fragment() {
+class DiaryEntryFragment : Fragment() {
 
     private var _binding: FragmentDiaryEntryBinding? = null
     private val binding get() = _binding!!
