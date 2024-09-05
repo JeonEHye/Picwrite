@@ -11,7 +11,9 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.picwrite.R
 import com.example.picwrite.databinding.FragmentCalendarBinding
-
+import com.example.picwrite.ui.diaryentry.DiaryEntryItem
+import com.example.picwrite.ui.diaryentry.DiaryEntryViewModel
+import java.util.UUID
 
 
 class CalendarFragment : Fragment() {
@@ -19,6 +21,7 @@ class CalendarFragment : Fragment() {
     private var _binding: FragmentCalendarBinding? = null
     private val binding get() = _binding!!
     private val viewModel: CalendarViewModel by viewModels()
+    private val diaryViewModel: DiaryEntryViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -71,29 +74,36 @@ class CalendarFragment : Fragment() {
             findNavController().navigate(R.id.action_calendarFragment_to_diaryEntryFragment)
         }
 
-        //1차 시도
+        //데이터 연결을 위해서 작성해 봤던 내용
+//        binding.btnDiaryEntryAdd.setOnClickListener{
+//            val id = UUID.randomUUID().toString()
+//            val title = "테스트"
+//            val content = "테스트 내용"
+//            val newDiary = DiaryEntryItem(id, title, content)
+//            diaryViewModel.addDiary(newDiary)
+
+    }
+
+
+    //1차 시도
 //
 //            // 이동하려는 프래그먼트를 인스턴스화
 //            val diaryEntryFragment = DiaryEntryFragment()
-//
 //            // 프래그먼트 매니저를 통해 트랜잭션 시작
 //            val transaction = requireActivity().supportFragmentManager.beginTransaction()
-//
 //            // 현재 프래그먼트를 새로운 프래그먼트로 교체
 //            transaction.replace(R.id.fragment_diary_entry_xml, diaryEntryFragment)
-//
 //            // 뒤로 가기 버튼을 눌렀을 때 이전 프래그먼트로 돌아오게 하기 위해 백스택에 추가
 //            transaction.addToBackStack(null)
-//
 //            // 트랜잭션 완료
 //            transaction.commit()
 //        }
-
-    }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
+
 }
+
 
