@@ -43,6 +43,7 @@ class CalendarFragment : Fragment() {
 
         binding.recyclerViewCalendar.layoutManager = layoutManager
 
+        // 서버랑 연결이 되어야 함(신)
         // ViewModel의 데이터를 관찰하여 RecyclerView에 연결
         viewModel.items.observe(viewLifecycleOwner, Observer { items ->
             val adapter = CalendarAdapter(items)
@@ -70,22 +71,22 @@ class CalendarFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         // ImageView 클릭 이벤트 설정
-        binding.btnDiaryEntryAdd.setOnClickListener {
-            findNavController().navigate(R.id.action_calendarFragment_to_diaryEntryFragment)
-        }
+//        binding.btnDiaryEntryAdd.setOnClickListener {
+//            findNavController().navigate(R.id.action_calendarFragment_to_diaryEntryFragment)
+//        }
 
         //데이터 연결을 위해서 작성해 봤던 내용
-//        binding.btnDiaryEntryAdd.setOnClickListener{
-//            val id = UUID.randomUUID().toString()
-//            val title = "테스트"
-//            val content = "테스트 내용"
-//            val newDiary = DiaryEntryItem(id, title, content)
-//            diaryViewModel.addDiary(newDiary)
+        binding.btnDiaryEntryAdd.setOnClickListener {
+            val id = UUID.randomUUID().toString()
+            val title = "테스트"
+            val content = "테스트 내용"
+            val newDiary = DiaryEntryItem(id, title, content)
+            diaryViewModel.addDiary(newDiary)
 
-    }
+        }
 
 
-    //1차 시도
+        //1차 시도
 //
 //            // 이동하려는 프래그먼트를 인스턴스화
 //            val diaryEntryFragment = DiaryEntryFragment()
@@ -98,6 +99,11 @@ class CalendarFragment : Fragment() {
 //            // 트랜잭션 완료
 //            transaction.commit()
 //        }
+
+
+
+
+    }
 
     override fun onDestroyView() {
         super.onDestroyView()
