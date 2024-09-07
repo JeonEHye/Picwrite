@@ -71,19 +71,19 @@ class CalendarFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         // ImageView 클릭 이벤트 설정
-//        binding.btnDiaryEntryAdd.setOnClickListener {
-//            findNavController().navigate(R.id.action_calendarFragment_to_diaryEntryFragment)
-//        }
+        binding.btnDiaryEntryFragment.setOnClickListener {
+            findNavController().navigate(R.id.action_calendarFragment_to_diaryEntryFragment)
+        }
 
         //데이터 연결을 위해서 작성해 봤던 내용
-        binding.btnDiaryEntryAdd.setOnClickListener {
-            val id = UUID.randomUUID().toString()
-            val title = "테스트"
-            val content = "테스트 내용"
-            val newDiary = DiaryEntryItem(id, title, content)
-            diaryViewModel.addDiary(newDiary)
-
-        }
+//        binding.btnDiaryEntryadd.setOnClickListener {
+//            val id = UUID.randomUUID().toString()
+//            val title = "테스트"
+//            val content = "테스트 내용"
+//            val newDiary = DiaryEntryItem(id, title, content)
+//            diaryViewModel.addDiary(newDiary)
+//
+//        }
 
 
         //1차 시도

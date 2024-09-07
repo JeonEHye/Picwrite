@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/navigation_diaryEntryFragment"
-        android:name="com.example.picwrite.ui.diary.DiaryEntryFragment"
+        android:name="com.example.picwrite.ui.diaryentry.DiaryEntryFragment"
         tools:layout="@layout/fragment_diary_entry" />
 
     <fragment
