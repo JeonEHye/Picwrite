@@ -77,6 +77,7 @@ class SigninActivity : AppCompatActivity() {
         firebaseAuth.signInWithCredential(credential)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
+                    Toast.makeText(this,"로그인 되었습니다.", Toast.LENGTH_SHORT).show()
                     Log.d(TAG, "signInWithCredential:success")
 
                     val intent = Intent(this, MainActivity::class.java)
