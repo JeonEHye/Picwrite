@@ -1,4 +1,4 @@
-package com.example.picwrite.ui.diary
+package com.example.picwrite.ui.diaryentry
 
 import android.os.Bundle
 import android.view.LayoutInflater
