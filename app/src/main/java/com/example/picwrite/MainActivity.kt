@@ -1,6 +1,6 @@
 package com.example.picwrite
 
-import AlbumAdapter
+// import AlbumAdapter
 import AlbumViewModel
 import android.os.Bundle
 import androidx.activity.viewModels

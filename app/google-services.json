@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "770980387688",
+    "project_id": "picwrite-1075a",
+    "storage_bucket": "picwrite-1075a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:770980387688:android:8273bde61ec1ec3e3814dd",
+        "android_client_info": {
+          "package_name": "com.example.picwrite"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "770980387688-gllrtvcp05b78joubc9di58u2fuh990i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.picwrite",
+            "certificate_hash": "816686bf02c4d06b2b3ea48cea1f7f8ced5db1a4"
+          }
+        },
+        {
+          "client_id": "770980387688-3h8d554a8mdvajccv7t79na3udqvj57s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJuxdnb-qtUS5NTIXz3lEi95oT-TQ2zUA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "770980387688-3h8d554a8mdvajccv7t79na3udqvj57s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
