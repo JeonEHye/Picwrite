@@ -71,6 +71,8 @@ class CalendarFragment : Fragment() {
         return root
     }
 
+    // [ 이동 관련 코드 구간 시작 ]
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -79,7 +81,11 @@ class CalendarFragment : Fragment() {
         binding.btnDiaryEntryFragment.setOnClickListener {
             findNavController().navigate(R.id.action_calendarFragment_to_diaryEntryFragment)
         }
-        // 다른 곳 이동은 여기까지만 복사하자.
+
+        // 일기 목록 클릭 이벤트
+        binding.btnDiaryList.setOnClickListener {
+            findNavController().navigate(R.id.action_calendarFragment_to_diaryListFragment)
+        }
 
         // 일기 디테일 페이지로 이동
         binding.viewCalendarSubBox.setOnClickListener {

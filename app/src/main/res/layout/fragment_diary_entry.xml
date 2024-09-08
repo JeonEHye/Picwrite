@@ -36,12 +36,12 @@
                 android:layout_height="20dp"
                 android:layout_marginEnd="8dp"
                 android:background="@drawable/ic_done_outline_24dp"
-                app:layout_constraintEnd_toStartOf="@+id/ic_diary_list"
+                app:layout_constraintEnd_toStartOf="@+id/btn_diary_list"
                 app:layout_constraintTop_toTopOf="parent"/>
 
             <!--일기 목차 버튼-->
             <ImageView
-                android:id="@+id/ic_diary_list"
+                android:id="@+id/btn_diary_list"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_marginEnd="36dp"
