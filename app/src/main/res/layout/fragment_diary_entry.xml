@@ -89,9 +89,9 @@
                         android:layout_marginStart="8dp"
                         android:layout_marginEnd="8dp"
                         android:background="@drawable/ic_star_24dp"
-                        app:layout_constraintBottom_toBottomOf="@id/tv_calendar_diary_entry_title"
+                        app:layout_constraintBottom_toBottomOf="@id/et_calendar_diary_entry_title"
                         app:layout_constraintStart_toStartOf="@id/view_calendar_sub_box_underline"
-                        app:layout_constraintTop_toTopOf="@id/tv_calendar_diary_entry_title" />
+                        app:layout_constraintTop_toTopOf="@id/et_calendar_diary_entry_title" />
 
 
                     <TextView
@@ -105,14 +105,15 @@
                         app:layout_constraintStart_toEndOf="@+id/btn_diary_entry_album_main_add"
                         app:layout_constraintTop_toTopOf="@id/view_calendar_sub_box_underline" />
 
-                    <TextView
-                        android:id="@+id/tv_calendar_diary_entry_title"
+                    <EditText
+                        android:id="@+id/et_calendar_diary_entry_title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
                         android:layout_marginTop="8dp"
                         android:text="일기 제목 자리 입니다."
                         android:textSize="16sp"
+                        android:background="@drawable/background_none"
                         app:layout_constraintStart_toEndOf="@id/tv_calendar_diary_entry_date"
                         app:layout_constraintTop_toTopOf="@id/view_calendar_sub_box_underline" />
 
@@ -173,14 +174,15 @@
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </HorizontalScrollView>
 
-                <TextView
-                    android:id="@+id/tv_calendar_diary_entry_content"
+                <EditText
+                    android:id="@+id/et_calendar_diary_entry_content"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
                     android:text="일기 내용 입니다"
                     android:textSize="16sp"
+                    android:background="@drawable/background_none"
                     app:layout_constraintStart_toStartOf="@id/view_calendar_sub_box"
                     app:layout_constraintTop_toBottomOf="@+id/tv_calendar_diary_entry_sub_title1" />
 
@@ -192,6 +194,7 @@
                     android:layout_marginTop="16dp"
                     android:text="#태그1입니다."
                     android:textSize="16sp"
+                    android:visibility="gone"
                     app:layout_constraintStart_toStartOf="@id/view_calendar_sub_box"
                     app:layout_constraintTop_toBottomOf="@id/sv_horizontal_album_tag" />
 
@@ -199,9 +202,10 @@
                     android:id="@+id/tv_calendar_diary_entry_sub_title2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
+                    android:layout_marginStart="4dp"
                     android:text="#태그2입니다."
                     android:textSize="16sp"
+                    android:visibility="gone"
                     app:layout_constraintBottom_toBottomOf="@id/tv_calendar_diary_entry_sub_title1"
                     app:layout_constraintStart_toEndOf="@id/tv_calendar_diary_entry_sub_title1"
                     app:layout_constraintTop_toTopOf="@id/tv_calendar_diary_entry_sub_title1" />
@@ -213,6 +217,7 @@
                     android:layout_marginStart="8dp"
                     android:text="#태그3입니다."
                     android:textSize="16sp"
+                    android:visibility="gone"
                     app:layout_constraintBottom_toBottomOf="@id/tv_calendar_diary_entry_sub_title2"
                     app:layout_constraintStart_toEndOf="@id/tv_calendar_diary_entry_sub_title2"
                     app:layout_constraintTop_toTopOf="@id/tv_calendar_diary_entry_sub_title2" />
@@ -227,6 +232,7 @@
                     android:paddingEnd="8dp"
                     android:text="+"
                     android:textSize="16sp"
+                    android:visibility="gone"
                     app:layout_constraintBottom_toBottomOf="@+id/tv_calendar_diary_entry_sub_title3"
                     app:layout_constraintStart_toEndOf="@+id/tv_calendar_diary_entry_sub_title3"
                     app:layout_constraintTop_toTopOf="@+id/tv_calendar_diary_entry_sub_title3" />

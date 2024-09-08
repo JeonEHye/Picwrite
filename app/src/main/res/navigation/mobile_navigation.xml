@@ -10,15 +10,16 @@
         android:name="com.example.picwrite.ui.calendar.CalendarFragment"
         android:label="@string/title_calendar"
         tools:layout="@layout/fragment_calendar">
-        <!--작성창 이동-->
-        <action
-            android:id="@+id/action_calendarFragment_to_diaryEntryFragment"
-            app:destination="@id/navigation_diaryEntryFragment" />
 
         <!--목록창 이동-->
         <action
             android:id="@+id/action_calendarFragment_to_diaryListFragment"
             app:destination="@id/navigation_diaryListFragment" />
+
+        <!--작성창 이동-->
+        <action
+            android:id="@+id/action_calendarFragment_to_diaryEntryFragment"
+            app:destination="@id/navigation_diaryEntryFragment" />
 
     </fragment>
 
