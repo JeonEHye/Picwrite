@@ -1,6 +1,5 @@
 package com.example.picwrite.ui.album
 
-import AlbumAdapter
 import AlbumViewModel
 import android.os.Bundle
 import android.view.LayoutInflater

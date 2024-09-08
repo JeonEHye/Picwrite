@@ -75,11 +75,16 @@ class CalendarFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         // 다른 곳으로 이동을 해보자.
-        // ImageView 클릭 이벤트 설정
+        // 일기 작성 추가 클릭 이벤트 설정
         binding.btnDiaryEntryFragment.setOnClickListener {
             findNavController().navigate(R.id.action_calendarFragment_to_diaryEntryFragment)
         }
         // 다른 곳 이동은 여기까지만 복사하자.
+
+        // 일기 디테일 페이지로 이동
+        binding.viewCalendarSubBox.setOnClickListener {
+            findNavController().navigate(R.id.action_calendarFragment_to_diaryEntryFragment)
+        }
 
         //데이터 연결을 위해서 작성해 봤던 내용
 //        binding.btnDiaryEntryadd.setOnClickListener {

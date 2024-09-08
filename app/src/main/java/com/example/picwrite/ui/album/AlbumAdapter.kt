@@ -1,4 +1,5 @@
-import android.media.RouteListingPreference
+package com.example.picwrite.ui.album
+
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -6,7 +7,6 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.picwrite.R
-import com.example.picwrite.ui.album.AlbumItem
 
 class AlbumAdapter(private val itemList: List<AlbumItem>) :
     RecyclerView.Adapter<AlbumAdapter.ViewHolder>() {
@@ -19,8 +19,8 @@ class AlbumAdapter(private val itemList: List<AlbumItem>) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = itemList[position]
-        holder.imageView.setImageResource(item.albumImage)
-        holder.textView.text = item.albumText
+        holder.albumAdapterImageView.setImageResource(item.albumImage)
+        holder.albumAdapterTextView.text = item.albumText
     }
 
     override fun getItemCount(): Int {
@@ -28,7 +28,7 @@ class AlbumAdapter(private val itemList: List<AlbumItem>) :
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val imageView: ImageView = itemView.findViewById(R.id.imageView)
-        val textView: TextView = itemView.findViewById(R.id.textView)
+        val albumAdapterImageView: ImageView = itemView.findViewById(R.id.iv_album_item)
+        val albumAdapterTextView: TextView = itemView.findViewById(R.id.tv_album_item)
     }
 }
