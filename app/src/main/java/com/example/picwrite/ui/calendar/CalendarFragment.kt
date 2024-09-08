@@ -41,9 +41,10 @@ class CalendarFragment : Fragment() {
             }
         }
 
+        // [달력 프래그먼트 상단의 달력, CalenarViewModel이랑 연결한 viewModel 변수를 사용함]
         binding.recyclerViewCalendar.layoutManager = layoutManager
 
-        // 서버랑 연결이 되어야 함(신)
+        // 서버랑 연결이 되어야 함(신튜터)
         // ViewModel의 데이터를 관찰하여 RecyclerView에 연결
         viewModel.items.observe(viewLifecycleOwner, Observer { items ->
             val adapter = CalendarAdapter(items)
@@ -60,8 +61,11 @@ class CalendarFragment : Fragment() {
                     //서버에서 날짜에 맞는 일기 정보를 받아와서 여기 위에서 출력. //일기 아이템 만들어서 넣기
                 }
             }
-
         })
+
+        // [달력 프래그먼트 하단의 일기 미리보기, DiaryEntryViewModel 이랑 연결한 diaryviewmodel 변수를 사용 해야함.]
+
+
 
         //연락처 과제 숙련 개인과제 연락처 해설영상 일기정보 추가 // 가짜데이터
         return root
@@ -70,10 +74,12 @@ class CalendarFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // 다른 곳으로 이동을 해보자.
         // ImageView 클릭 이벤트 설정
         binding.btnDiaryEntryFragment.setOnClickListener {
             findNavController().navigate(R.id.action_calendarFragment_to_diaryEntryFragment)
         }
+        // 다른 곳 이동은 여기까지만 복사하자.
 
         //데이터 연결을 위해서 작성해 봤던 내용
 //        binding.btnDiaryEntryadd.setOnClickListener {
@@ -85,9 +91,7 @@ class CalendarFragment : Fragment() {
 //
 //        }
 
-
         //1차 시도
-//
 //            // 이동하려는 프래그먼트를 인스턴스화
 //            val diaryEntryFragment = DiaryEntryFragment()
 //            // 프래그먼트 매니저를 통해 트랜잭션 시작
@@ -99,9 +103,6 @@ class CalendarFragment : Fragment() {
 //            // 트랜잭션 완료
 //            transaction.commit()
 //        }
-
-
-
 
     }
 

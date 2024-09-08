@@ -40,12 +40,12 @@ class AlbumFragment : Fragment() {
 
         binding.albumRecyclerView.layoutManager = layoutManager
 
-        // ViewModel의 데이터를 관찰하여 RecyclerView에 연결
+        // ViewModel의 데이터를 관찰하여 달력 RecyclerView에 연결
         viewModel.items.observe(viewLifecycleOwner, Observer { items ->
             binding.albumRecyclerView.adapter = AlbumAdapter(items)
         })
 
-        // 앨범 하단 리사이클러뷰 달력 12개 표시
+        // 앨범 하단 리사이클러뷰 표시
         // GridLayoutManager 설정
         val layoutManager2 = GridLayoutManager(requireContext(), 3)
         layoutManager2.spanSizeLookup = object : GridLayoutManager.SpanSizeLookup() {
@@ -60,7 +60,6 @@ class AlbumFragment : Fragment() {
         viewModel.items2.observe(viewLifecycleOwner, Observer { items ->
             binding.albumRecyclerView2.adapter = AlbumAdapter(items)
         })
-
 
         return root
     }

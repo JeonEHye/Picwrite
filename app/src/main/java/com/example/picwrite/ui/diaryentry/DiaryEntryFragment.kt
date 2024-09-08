@@ -5,6 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import com.example.picwrite.R
 import com.example.picwrite.databinding.FragmentDiaryEntryBinding
 
 class DiaryEntryFragment : Fragment() {
@@ -22,6 +24,22 @@ class DiaryEntryFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        //데이터 연결을 위해서 작성해 봤던 내용
+//        binding.btnDiaryEntryadd.setOnClickListener {
+//            val id = UUID.randomUUID().toString()
+//            val title = "테스트"
+//            val content = "테스트 내용"
+//            val newDiary = DiaryEntryItem(id, title, content)
+//            diaryViewModel.addDiary(newDiary)
+//
+//        }
+
+        // 다른 곳으로 이동을 해보자.
+        // 뒤로가기 버튼 클릭 이벤트 처리
+        binding.btnBack.setOnClickListener {
+            findNavController().navigate(R.id.action_diaryEntryFragment_to_calendarFragment)
+        }
 
         // 저장 버튼 클릭 이벤트 처리
         binding.btnDiaryEntryAdd.setOnClickListener {

@@ -8,13 +8,19 @@
     <fragment
         android:id="@+id/navigation_diaryEntryFragment"
         android:name="com.example.picwrite.ui.diaryentry.DiaryEntryFragment"
-        tools:layout="@layout/fragment_diary_entry" />
+        tools:layout="@layout/fragment_diary_entry">
+        <!--이동-->
+        <action
+            android:id="@+id/action_diaryEntryFragment_to_calendarFragment"
+            app:destination="@id/navigation_calendar" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_calendar"
         android:name="com.example.picwrite.ui.calendar.CalendarFragment"
         android:label="@string/title_calendar"
         tools:layout="@layout/fragment_calendar">
+        <!--이동-->
         <action
             android:id="@+id/action_calendarFragment_to_diaryEntryFragment"
             app:destination="@id/navigation_diaryEntryFragment" />
