@@ -30,6 +30,12 @@ class DiaryListFragment : Fragment() {
         val root: View = binding.root
 
 
+        return root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
         // 목록 표시
         // LinearLayoutManager 설정
         val layoutManager =
@@ -37,19 +43,11 @@ class DiaryListFragment : Fragment() {
         binding.recyclerViewDiaryList.layoutManager = layoutManager
 
 //        // ViewModel의 데이터를 관찰하여 RecyclerView에 연결
-//        viewModel.items.observe(viewLifecycleOwner, Observer { items ->
-//            val adapter = DiaryListAdapter(items)
-//            binding.recyclerViewDiaryList.adapter = adapter
+        viewModel.items.observe(viewLifecycleOwner, Observer { items ->
+            val adapter = DiaryListAdapter(items)
+            binding.recyclerViewDiaryList.adapter = adapter
 //            binding.recyclerViewDiaryList.adapter = DiaryListAdapter(items)
-//        })
-
-        return root
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-
+        })
     }
 
     override fun onDestroyView() {

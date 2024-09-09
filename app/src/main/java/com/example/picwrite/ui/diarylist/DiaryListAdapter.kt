@@ -28,7 +28,7 @@ class DiaryListAdapter(private val itemList: List<DiaryListItem>) :
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val diaryListAdapterImageView: ImageView = itemView.findViewById(R.id.iv_album_item)
-        val diaryListAdapterTextView: TextView = itemView.findViewById(R.id.tv_album_item)
+        val diaryListAdapterImageView: ImageView = itemView.findViewById(R.id.iv_diary_list)
+        val diaryListAdapterTextView: TextView = itemView.findViewById(R.id.tv_diary_list)
     }
 }
