@@ -9,6 +9,7 @@
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:paddingTop="@dimen/activity_vertical_margin"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -61,6 +62,8 @@
                 패딩 영역을 포함하여 콘텐츠가 더 넓은 범위를 커버하도록 하고 싶을 때 clipToPadding을 false로 설정하면 좋음-->
 
             </androidx.recyclerview.widget.RecyclerView>
+
+            <!--태그 부분 잠정 삭제-->
 
             <TextView
                 android:id="@+id/tv_calendar_diary_entry_top_sub_title1"
