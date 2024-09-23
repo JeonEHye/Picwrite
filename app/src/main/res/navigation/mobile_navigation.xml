@@ -3,7 +3,34 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_calendar">
+    app:startDestination="@+id/navigation_signInFragment">
+
+    <fragment
+        android:id="@+id/navigation_signInFragment"
+        android:name="com.example.picwrite.signin.SignInFragment"
+        android:label="@string/title_signIn"
+        tools:layout="@layout/fragment_sign_in">
+
+        <!--약관동의 이동-->
+        <action
+            android:id="@+id/action_signInFragment_to_termsFragment"
+            app:destination="@id/navigation_termsFragment" />
+
+        <!--달력 이동-->
+        <action
+            android:id="@+id/action_signInFragment_to_calendar"
+            app:destination="@id/navigation_calendar" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_termsFragment"
+        android:name="com.example.picwrite.signin.TermsFragment"
+        android:label="@string/title_terms"
+        tools:layout="@layout/fragment_terms">
+
+    </fragment>
+
 
     <fragment
         android:id="@+id/navigation_calendar"
@@ -22,6 +49,9 @@
             app:destination="@id/navigation_diaryEntryFragment" />
 
     </fragment>
+
+
+
 
     <fragment
         android:id="@+id/navigation_diaryEntryFragment"

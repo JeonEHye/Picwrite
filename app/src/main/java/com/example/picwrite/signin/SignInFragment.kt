@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
+import androidx.navigation.fragment.findNavController
 import com.example.picwrite.ARG_AGREEMENT
 import com.example.picwrite.R
 import com.example.picwrite.databinding.FragmentSignInBinding
@@ -59,6 +60,13 @@ class SignInFragment : Fragment() {
 
         setupTermsButton()
         setupSignInButton()
+
+        // 약관 동의
+        binding.clButtonTerms.setOnClickListener {
+            findNavController().navigate(R.id.action_signInFragment_to_termsFragment)
+        }
+
+
     }
 
     private fun setupGoogleSignIn() {
