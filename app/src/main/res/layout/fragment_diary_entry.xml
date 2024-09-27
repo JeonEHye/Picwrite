@@ -41,7 +41,7 @@
                 app:layout_constraintTop_toTopOf="parent"/>
 
             <TextView
-                android:id="@+id/text_calender"
+                android:id="@+id/tv_calender_month"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="8월"
@@ -61,7 +61,7 @@
                 android:paddingBottom="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/text_calender">
+                app:layout_constraintTop_toBottomOf="@+id/tv_calender_month">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/view_calendar_sub_box_underline"
